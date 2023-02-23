@@ -1,3 +1,4 @@
+//Render each individual videoListEntry. Note that props.handleClick is passed from App.jsx to VideoList.jsx, and from videoList.jsx to videoListItem.jsx. Also we wrap that function in an anonymous function so that we can pass the video as an argument. Without the wrapper function the handleClick function would be called when rendering (when the onClick listener is bound to the function) and the button would not work when clicked.
 var VideoListEntry = (props) => (
   <div className="video-list-entry media" onClick={() => { props.handleClick(props.video); }}>
     <div className="media-left media-middle">
